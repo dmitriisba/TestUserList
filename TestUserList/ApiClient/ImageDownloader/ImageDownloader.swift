@@ -12,6 +12,9 @@ import Alamofire
 class ImageDownloader {
     
     static func getImageFromWebPath(_ webPath: String, completion: @escaping (_ image: UIImage?) -> Void) {
+        #if DEBUG
+        print("Start download: \(webPath)")
+        #endif
         AF.request(webPath).responseData { response in
             switch(response.result) {
             case .success(let data):

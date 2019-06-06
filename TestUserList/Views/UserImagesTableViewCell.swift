@@ -51,6 +51,7 @@ class UserImagesTableViewCell: UITableViewCell {
             make.leading.equalToSuperview().offset(8)
             make.trailing.equalToSuperview().offset(-8)
             make.bottom.equalToSuperview().offset(8)
+            make.height.equalTo(0).priority(999)
         }
     }
 
